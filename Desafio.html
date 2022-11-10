@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+Turfe amigo
+
+<br>
+
+<button onclick="turfe()">Dar a largada</button>
+<br><br>
+
+<div id="saida"></div>
+
+
+</body>
+</html>
+
+<script>
+
+var totcavalo1 = 0;
+var totcavalo2 = 0;
+var totcavalo3 = 0;
+
+function turfe(){
+saida.innerHTML="";
+
+    for(var cont =0; cont < 7;cont ++){
+
+        var c1 = 7 + Math.random() * 9; 
+        var c2 = 7 + Math.random() * 9; 
+        var c3 = 7 + Math.random() * 9; 
+
+        totcavalo1 = totcavalo1 + c1;
+        totcavalo2 = totcavalo2 + c2;
+        totcavalo3 = totcavalo3 + c3;
+
+        saida.innerHTML+= `Volta 03 <br><br> 
+
+        Cavalo01 – c1 – totcavalo1 – Cavalo02 – x,xx – yy,yy - Cavalo03 – x,xx – yy,yy  `;
+
+    }
+
+}
+    
+
+</script>
