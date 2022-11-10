@@ -58,6 +58,20 @@
         ${nome1} – ${c1} – ${totcavalo1} – ${nome2} – ${c2} – ${totcavalo2} - ${nome3} – ${c3} – ${totcavalo3}  <br><br>`;
 
         }
+        if(totcavalo1<totcavalo2||totcavalo1<totcavalo3){
+            saida.innerHTML='CAVALO 1 GANHOU EM 1 LUGAR'
+        }else if(totcavalo2<totcavalo1||totcavalo2<totcavalo3){
+            saida.innerHTML='CAVALO 2 GANHOU EM 1 LUGAR'
+        }else{
+            saida.innerHTML='CAVALO 3 GANHOU EM  1 LUGA'
+        }
+
+
+
+
+        totcavalo1=0
+        totcavalo2=0
+        totcavalo3=0
 
     }
 
