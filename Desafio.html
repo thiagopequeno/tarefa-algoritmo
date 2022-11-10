@@ -26,6 +26,7 @@
     <br><br>
 
     <div id="saida"></div>
+    <div id="resultado"></div>
 
 
 </body>
@@ -67,12 +68,15 @@
 
         }
         if(totcavalo1<totcavalo2 && totcavalo1<totcavalo3){
-            saida.innerHTML+=`CAVALO  GANHOU EM 1 LUGAR`
+            saida.innerHTML+=`CAVALO ${nome1}  GANHOU EM 1 LUGAR`
             if(totcavalo2<totcavalo3 || totcavalo3<totcavalo2){
-                saida.innerHTML+=`<BR> CAVALO `
+                saida.innerHTML+=`<BR> CAVALO ${nome2} ganhou em 1 lugar `
+            }else if(totcavalo3<totcavalo1&&totcavalo3<totcavalo2){
+                saida.innerHTML+=`CAVALO ${nome3} GANHOU EM 1 LUGAR`
+
             }
         }
-        }
+
 
         // //else if(totcavalo2<totcavalo1 && totcavalo2<totcavalo3){
         //     saida.innerHTML+='CAVALO 2 GANHOU EM 1 LUGAR'
@@ -81,11 +85,17 @@
 
 
 
+
         totcavalo1=0
         totcavalo2=0
         totcavalo3=0
 
-    }
+    
+        }
+
+
+
+
 
 
 </script>
