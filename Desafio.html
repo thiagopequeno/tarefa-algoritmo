@@ -11,10 +11,11 @@
 Turfe amigo
 
 <br><br>
-<input type="text" id="cavalo1"  placeholder=""> <br>
-<input type="text" id="cavalo2">
-<input type="text" id="cavalo3">
+<input type="text" id="cavalo1"  placeholder="Cavalo 1"> <br>
+<input type="text" id="cavalo2" placeholder="Cavalo 2"> <br>
+<input type="text" id="cavalo3" placeholder="Cavalo 3">
 <br><br>
+<input type="text" id="in_volta" placeholder="Quantas voltas"> <br>
 
 <button onclick="turfe()">Dar a largada</button>
 <br><br>
@@ -38,8 +39,8 @@ var nome1 = cavalo1.value
 var nome2 = cavalo2.value
 var nome3 = cavalo3.value
 
-
-    for(var cont =0; cont < 7;cont ++){
+// numeros de voltas
+    for(var cont = Number(in_voltas.value); cont < 7;cont ++){
 
         var c1 =Number( 7 + (Math.random() * (9+1-7)).toFixed(1)); 
         var c2 = Number( 7 + (Math.random() * (9+1-7)).toFixed(1)); 
