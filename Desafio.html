@@ -45,15 +45,17 @@
         // numeros de voltas
         for (var cont = 0; cont < Number(in_volta.value); cont++) {
 
-            var c1 = (Number(7 + Math.random() * (9 + 1 - 7))).toFixed(1);
-            var c2 = (Number(7 + Math.random() * (9 + 1 - 7))).toFixed(1);
-            var c3 = (Number(7 + Math.random() * (9 + 1 - 7))).toFixed(1);
+            var c1 = Number(7 + (Math.random() * (9-7)).toFixed(1));
+            var c2 = Number(7 + (Math.random() * (9-7)).toFixed(1));
+            var c3 = Number(7 + (Math.random() * (9-7)).toFixed(1));
+            
+            
 
             totcavalo1 = totcavalo1 + c1;
             totcavalo2 = totcavalo2 + c2;
             totcavalo3 = totcavalo3 + c3;
             saida.innerHTML += `Volta ${cont + 1} <br><br> 
-        ${nome1} – ${c1} – ${totcavalo1.toFixed(1)} – ${nome2} – ${c2} – ${totcavalo2.toFixed(1)} - ${nome3} – ${c3} – ${totcavalo3.toFixed(1)}  <br><br>`;
+        ${nome1} – ${c1} – ${totcavalo1} – ${nome2} – ${c2} – ${totcavalo2} - ${nome3} – ${c3} – ${totcavalo3}  <br><br>`;
 
         }
 
