@@ -17,7 +17,10 @@
     <input type="text" id="cavalo2" placeholder="Cavalo 2"> <br>
     <input type="text" id="cavalo3" placeholder="Cavalo 3">
     <br><br>
-    <input type="text" id="in_volta" placeholder="Quantas voltas"> <br>
+    <input  id="in_volta" placeholder="Quantas voltas"> <br>
+
+    <input id="inmin" placeholder="Tempo minimo">
+    <input id="inmax"placeholder="Tempo máximo">
 
     <button onclick="turfe()">Dar a largada</button>
     <br><br>
@@ -42,12 +45,17 @@
         var nome2 = cavalo2.value
         var nome3 = cavalo3.value
 
+        var min= Number(inmin.value);
+        var max= Number(inmax.value);
+        
+
         // numeros de voltas
         for (var cont = 0; cont < Number(in_volta.value); cont++) {
 
-            var c1 = Number(7 + (Math.random() * (9-7)).toFixed(1));
-            var c2 = Number(7 + (Math.random() * (9-7)).toFixed(1));
-            var c3 = Number(7 + (Math.random() * (9-7)).toFixed(1));
+            var c1 = Number( min + (Math.random() * (max-min)));
+            var c2 = Number( min + (Math.random() * (max-min)));
+            var c3 = Number( min + (Math.random() * (max-min)));
+           
             
             
 
@@ -58,12 +66,12 @@
         ${nome1} – ${c1} – ${totcavalo1} – ${nome2} – ${c2} – ${totcavalo2} - ${nome3} – ${c3} – ${totcavalo3}  <br><br>`;
 
         }
-        if(totcavalo1<totcavalo2||totcavalo1<totcavalo3){
-            saida.innerHTML='CAVALO 1 GANHOU EM 1 LUGAR'
-        }else if(totcavalo2<totcavalo1||totcavalo2<totcavalo3){
-            saida.innerHTML='CAVALO 2 GANHOU EM 1 LUGAR'
+        if(totcavalo1<totcavalo2 && totcavalo1<totcavalo3){
+            saida.innerHTML+=`CAVALO  GANHOU EM 1 LUGAR`
+        }else if(totcavalo2<totcavalo1 && totcavalo2<totcavalo3){
+            saida.innerHTML+='CAVALO 2 GANHOU EM 1 LUGAR'
         }else{
-            saida.innerHTML='CAVALO 3 GANHOU EM  1 LUGA'
+            saida.innerHTML+='CAVALO 3 GANHOU EM  1 LUGA'
         }
 
 
